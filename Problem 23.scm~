@@ -1,0 +1,13 @@
+(load "Problem 21.scm")
+(load "auxiliaries.scm")
+
+(define (abundant? n)
+  (> (sum-of-prop-divs n) n))
+(define abdt-<-28123
+  (filter abundant? (enumerate-interval 1 28123)))
+		   
+(define (p23)
+  (- (sum-of-first 28123)
+     (accumulate + 0
+		 (map (lambda (lst) (apply + lst))
+		      (cross-product abdt-<-28123 abdt-<-28123)))))

@@ -1,0 +1,8 @@
+# ignore temp/backup files
+\#*\#
+*.bak
+
+*.txt
+
+compiled/
+

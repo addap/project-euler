@@ -1,0 +1,22 @@
+(define (factorial n)
+  (define (iter n result)
+    (if (<= n 1)
+	result
+	(iter (- n 1) (* n result))))
+  (iter n 1))
+
+  (define (helper counter base result)
+    (if (null? digits)
+	result
+	(let ((block-size (factorial (- (length digits) 1))))
+	  (if (and (<= (+ base (* counter block-size))
+		       n)
+		   (<= n
+		       (+ base (* (+ counter 1) block-size))))
+	      (let ((correct-digit (list-ref digits counter)))
+		(delete! correct-digit digits)
+		(helper 0 (+ base (* counter block-size)) (cons correct-digit result)))
+	      (helper (+ counter 1) base result)))))
+(define (find-nth-permutation digits n)
+   (helper 0 0 '()))
+    
