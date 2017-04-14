@@ -1,8 +1,8 @@
-# ignore temp/backup files
+# ignore temp/backup and old Racket files
 \#*\#
 *.bak
-
-*.txt
+*~
+*.rkt
 
 compiled/
 
