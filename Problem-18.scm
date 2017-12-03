@@ -234,6 +234,7 @@
 		 (new-result (map + result-modified next-row)))
 	    (add-rows (cdr rows) new-result))))
     (apply max (add-rows (cdr triangelized-grid) (car triangelized-grid)))))
+
 (define (p61)
   (let ((triangelized-grid (triangelize p61-grid)))
     (define (add-rows rows result)
